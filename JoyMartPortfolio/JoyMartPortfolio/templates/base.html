@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+{% load static %}
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+    <title>Joy Mart's Portfolio</title>
+</head>
+{% url 'home' as home_url %}
+{% url 'project' as project_url %}
+{% url 'about' as about_url %}
+{% url 'social' as social_url %}
+{% url 'contact' as contact_url %}
+
+<!-- Links -->
+<ul class="nav">
+    {% load lineage %}
+    <li class="nav-item {% if request.path == home_url %} active {% endif %}">
+        <a class="nav-link" href="{{home_url}}">Home</a>
+    </li>
+    <li class="nav-item {% if request.path == project_url %} active {% endif %}">
+        <a class="nav-link" href="{{project_url}}">Projects</a>
+    </li>
+    <li class="nav-item {% if request.path == about_url %} active {% endif %}">
+        <a class="nav-link" href="{{about_url}}">About</a>
+    </li>
+    <li class="nav-item {{% if request.path == social_url %} active {% endif %}">
+        <a class="nav-link" href="{{social_url}}">Social</a>
+    </li>
+    <li class="nav-item {% if request.path == contact_url %} active {% endif %}">
+        <a class="nav-link" href="{{contact_url}}">Contact</a>
+    </li>
+</ul>
+<body>
+{% block content %}
+
+{% endblock %}
+
+<br>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<br>
+<br>
+<br>
+</body>
+<footer>
+  <div class="footer">
+    <center>Joy Mart <a href="https://www.linkedin.com/in/joy-mart-55579514b/" target="_blank"><img src="{% static 'images/linkedIn.png' %}" alt="LinkedIn" style="width: 20px;"></a>
+        <a href="https://www.instagram.com/joy__joy__/" target="_blank"><img src="{% static 'images/instagram.png' %}" alt="LinkedIn" style="width: 20px;"></a>
+        <a href="https://github.com/JoyMart" target="_blank"><img src="{% static 'images/github.png' %}" alt="LinkedIn" style="width: 20px;"></a>
+    </center><br>
+  </div>
+</footer>
+
+</html>

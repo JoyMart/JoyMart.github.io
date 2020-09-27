@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+
+<div href="about">
+    <!-- image -->
+    <div class="about">
+        <img src="{% static project.image %}" alt="" width="100%">
+    </div>
+</div>
+
+<!-- image text -->
+<div class="img_txt">
+	<h2 style="color:#00284d; font-family: Courier; text-align:center">{{ project.title }}</h2>
+    <h3>About the project:</h3>
+        <p class="card-text">{{ project.description }}</p>
+    <br>
+    <h3>Technology used:</h3>
+        <p>{{ project.technology }}</p>
+    <a href="{% url 'project_detail' project.pk %}" class="btn btn-primary">Read more</a>
+</div>
+
+{% endblock %}

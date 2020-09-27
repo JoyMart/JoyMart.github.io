@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+
+<div href="about">
+    <!-- image -->
+    <div class="about"></div>
+</div>
+
+<!-- image text -->
+<div class="img_txt">
+    <h2 style="text-align: left; padding-left: 20%;"> My Projects </h2>
+    {% for project in projects %}
+	<h2 style="color:#00284d; font-family: Courier; text-align:center">{{ project.title }}</h2>
+    <p class="card-text">{{ project.description }}</p>
+    {% if project.title == 'My First Project' %}
+        <a href="https://github.com/JoyMart/myProjects/tree/master/bootstrap4_project" target="_blank" class="btn btn-primary">Check it out on GitHub</a>
+    {% elif project.title == 'Checkbook Project' %}
+        <a href="https://github.com/JoyMart/djangoCheckbook" target="_blank" class="btn btn-primary">Check it out on GitHub</a>
+    {% endif %}
+    {% endfor %}
+</div>
+
+{% endblock %}

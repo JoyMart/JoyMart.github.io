@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+<div href="social">
+    <!-- image -->
+    <div class="social"></div>
+</div>
+
+<!-- image text -->
+<div class="img_txt">
+	<h2 style="color:#00284d; font-family: Courier; text-align:center">Let's Talk!</h2>
+		<p>
+		    <italic>
+            <p>I'd love to hear from you!
+                <br>Here is my LinkedIn<a href="https://www.linkedin.com/in/joy-mart-55579514b/" target="_blank"><img src="{% static 'images/linkedIn.png' %}" alt="LinkedIn" style="width: 20px;"></a> profile.
+                <br>Feel free to follow me on instagram<a href="https://www.instagram.com/joy__joy__/" target="_blank"><img src="{% static 'images/instagram.png' %}" alt="LinkedIn" style="width: 20px;"></a>.
+            </p>
+            <p> I prefer to be reached
+                <br>through my contact page <a href="{% url 'contact' %}"> here</a>.
+                <br> But if you want to reach out through
+                <br> my social media that is okay too!
+            </p>
+			</italic>
+		</p>
+</div>
+<br>
+<br>
+<br>
+
+
+{% endblock %}

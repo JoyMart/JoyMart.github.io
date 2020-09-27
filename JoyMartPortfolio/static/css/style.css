@@ -1,0 +1,175 @@
+{% load static %}
+
+.nav {
+    min-height: 60px !important;
+    background-color:#ccddff !important;
+    list-style-type: none !important;
+    text-align: justify !important;
+}
+
+.nav-item {
+    display: inline !important;
+}
+
+.nav-link {
+    text-align: center;
+    color: #fff !important;
+    text-shadow: 3px 3px #b3ccff !important;
+    display: inline-block !important;
+    text-align: left !important;
+    min-height: 60px !important;
+}
+
+.nav-link:hover{
+    background-color: rgba(221, 221, 238, .8) !important;
+    color: #000 !important;
+    text-shadow: none !important;
+}
+
+body {
+    background-color: rgb(221, 221, 238, .8) ;
+}
+
+
+/* Text over the video */
+.image_txt {
+	background: rgba(0, 0, 0, 0.125); /* This provides a semi-transparent background for the text to sit over */
+	color: white;
+	font-family: Georgia;
+	font-stretch: 300%;
+	width: 100%;
+	padding-top: 30px; /* This adds padding around the text so that the background goes slightly beyond the text */
+	padding-bottom: 50px;
+	margin-top: 5%;
+    position: relative;
+	-webkit-animation: moveNav 4s;
+}
+
+.footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #ccddff;
+    color: black;
+    text-align: center;
+}
+
+/* social */
+.social {
+    position: fixed;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+	background-image: url('../images/cheers.jpg');
+}
+/*about*/
+.about {
+    position: fixed;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+	background-image: url('../images/computer_desk.jpg');
+}
+
+/*contact*/
+.contact {
+    position: fixed;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+	background-image: url('../images/contact.jpg');
+}
+
+/*hey_there*/
+.image {
+    position: fixed;
+	width: 100%;
+	height: 100%;
+	background-image: url('../images/tree_fog.jpg');
+}
+
+
+.img_txt {
+	background: rgba(204, 221, 255, .8); /* This provides a semi-transparent background for the text to sit over */
+	color: 	#00284d;
+	font-weight: bold;
+	font-size: 20px;
+	font-family: Courier;
+	font-stretch: 300%;
+    position: relative;
+    text-align: center;
+    width: 100%;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 30px;
+    display: block;
+    margin-top: 5%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.about_txt {
+	background: rgba(204, 221, 255, 0.9); /* This provides a semi-transparent background for the text to sit over */
+	color: 	#00284d;
+	font-weight: bold;
+	font-size: 16px;
+	font-family: Courier;
+	font-stretch: 200%;
+    position: relative;
+    text-align: left;
+    width: 60%;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 30px;
+    display: block;
+    margin-top: 10%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* contact form functions and info */
+.form-container {
+    padding-top 10;
+    padding-bottom: 30px;
+    padding: 9px;
+}
+
+/* Input fields */
+.form-container input {
+    width: 50%;
+    padding: 10px;
+    margin: .6vw 0 .6vw 0;
+    border-color: black;
+    background: #ccddff;
+    font-size: 15px;
+}
+
+/* Submit button */
+.form-container .btn {
+    background-color: #ccddff;
+    color: black;
+    border-color: black;
+    margin-bottom:1vh;
+}
+/* Button styling */
+button {
+    font-weight: bold;
+    padding: 1.5vw 1.5vw;
+    border-color: black;
+    cursor: pointer;
+    width: 50%;
+    height: auto;
+}
+
+  /* Hover effect for buttons */
+button:hover, .btn:hover{
+	color: white;
+	background-color: rgba(221, 221, 238, .8);
+	-webkit-transition-duration: 1s;
+	transition-duration: 1s;
+	border-style: solid;
+}

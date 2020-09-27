@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block content %}
+
+<div href="social">
+    <!-- image -->
+    <div class="contact"></div>
+</div>
+
+<!-- image text -->
+<div class="img_txt">
+	<h2 style="color:#00284d; font-family: Courier; text-align:center">Hey there!</h2>
+    <p>I am so glad you are interested in talking with me!
+        <form action="https://formspree.io/joybellsmart@gmail.com" method="POST" class="form-container">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="btn">Submit</button>
+        </form>
+        <br>I look forward to reading your email!
+        <!--email form goes here-->
+    </p>
+</div>
+<br>
+<br>
+<br>
+
+{% endblock %}
